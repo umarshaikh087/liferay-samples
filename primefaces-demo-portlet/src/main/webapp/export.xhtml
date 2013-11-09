@@ -1,0 +1,68 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+
+    <h:head />
+
+    <h:form>
+
+        <p:dataTable id="tbl" var="car" value="#{carBean.cars}">
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Model" />
+                </f:facet>
+                <h:outputText value="#{car.model}" />
+            </p:column>
+
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Year"/>
+                </f:facet>
+                <h:outputText value="#{car.year}" />
+            </p:column>
+
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Manufacturer" />
+                </f:facet>
+                <h:outputText value="#{car.manufacturer}" />
+            </p:column>
+
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Color" />
+                </f:facet>
+                <h:outputText value="#{car.color}" />
+            </p:column>
+
+        </p:dataTable>
+
+        <br />
+
+        <h:panelGrid columns="4" cellpadding="10">
+            <h:commandLink id="excel">
+                Excel
+                <p:dataExporter type="xls" target="tbl" fileName="cars" />
+            </h:commandLink>
+
+            <h:commandLink id="pdf">
+                PDF
+                <p:dataExporter type="pdf" target="tbl" fileName="cars"/>
+            </h:commandLink>
+
+            <h:commandLink id="csv">
+                CSV
+                <p:dataExporter type="csv" target="tbl" fileName="cars" />
+            </h:commandLink>
+
+            <h:commandLink id="xml">
+                XML
+                <p:dataExporter type="xml" target="tbl" fileName="cars" />
+            </h:commandLink>
+        </h:panelGrid>
+
+    </h:form>
+
+</f:view>

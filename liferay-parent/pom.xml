@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>unicon</groupId>
 	<artifactId>liferay-parent</artifactId>
@@ -7,8 +7,9 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<liferay.auto.deploy.dir>c:\</liferay.auto.deploy.dir>
+		<liferay.auto.deploy.dir>C:\work\liferay-portal-6.1.2-ce-ga3\deploy</liferay.auto.deploy.dir>
 		<liferay.version>6.1.2</liferay.version>
+		<liferay.maven.plugin.version>6.1.2</liferay.maven.plugin.version>
 	</properties>
 
 	<dependencies>
@@ -53,4 +54,18 @@
 		</dependency>
 	</dependencies>
 
+  <modules>
+    <module>prime</module>
+  </modules>
+  <distributionManagement>
+    <repository>
+        <id>liferay-releases</id>
+        <url>c:\work\repo\liferay-releases</url>
+    </repository>
+    <snapshotRepository>
+        <id>liferay-snapshots</id>
+        <name>Liferay Snapshots Repository</name>
+        <url>file://c:\work\repo\liferay-snapshots</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
