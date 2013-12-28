@@ -7,7 +7,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<liferay.auto.deploy.dir>C:\work\liferay-portal-6.1.2-ce-ga3\deploy</liferay.auto.deploy.dir>
+		<liferay.auto.deploy.dir>C:\work\liferay-portal-jboss-6.1.2-ce-ga3\deploy</liferay.auto.deploy.dir>
 		<liferay.version>6.1.2</liferay.version>
 		<liferay.maven.plugin.version>6.1.2</liferay.maven.plugin.version>
 	</properties>
